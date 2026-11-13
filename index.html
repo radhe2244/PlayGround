@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f6f7f3" />
+  <title>Indie Empire — Studio Tycoon</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232c9169'/%3E%3Cpath d='M9 9h6v6H9zm8 0h6v6h-6zM9 17h6v6H9zm8 0h6v6h-6z' fill='%23e2f5e9'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" aria-label="Indie Empire home">
+        <span class="brand-mark"><span></span><span></span><span></span><span></span></span>
+        <span class="brand-copy">indie<span>empire</span></span>
+      </a>
+      <div class="studio-switch"><div class="studio-avatar">P</div><div><small>YOUR STUDIO</small><strong id="studioName">Pinecone Games</strong></div><span class="chevron">⌄</span></div>
+      <div class="nav-label">WORKSPACE</div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <button class="nav-item active" data-view="overview"><span class="nav-icon">▦</span> Overview</button>
+        <button class="nav-item" data-view="projects"><span class="nav-icon">◈</span> Projects <span class="nav-count" id="projectCount">1</span></button>
+        <button class="nav-item" data-view="team"><span class="nav-icon">♧</span> Team</button>
+        <button class="nav-item" data-view="office"><span class="nav-icon">⌂</span> Office</button>
+        <button class="nav-item" data-view="research"><span class="nav-icon">⌬</span> Research</button>
+        <button class="nav-item" data-view="market"><span class="nav-icon">↗</span> Market</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="season-card"><div class="season-top"><span>STUDIO RANK</span><span class="rank-dot"></span></div><div class="rank-name">Indie darling <span>↗</span></div><div class="rank-track"><span></span></div><small>Next up: Rising star</small></div>
+        <button class="help-link" id="howToPlay"><span>ⓘ</span> How to play</button>
+        <div class="profile"><div class="profile-avatar">JD</div><div><strong>Jamie Davis</strong><small>Studio founder</small></div><button class="more-button" aria-label="Profile options">···</button></div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <button class="mobile-menu" id="menuToggle" aria-label="Open menu">☰</button>
+        <div class="breadcrumb">Studio <span>/</span> <strong id="breadcrumbTitle">Overview</strong></div>
+        <div class="top-actions"><div class="season-pill"><span class="sun-icon">☀</span> <span id="seasonLabel">Spring, 2025</span></div><button class="icon-button" id="soundToggle" aria-label="Toggle sound">♫</button><button class="icon-button notification" id="notifications" aria-label="Notifications">♧<i></i></button><button class="avatar-small">JD</button></div>
+      </header>
+      <div class="page-wrap" id="pageWrap">
+        <section class="welcome-row">
+          <div><div class="eyebrow"><span class="live-dot"></span> YOUR STUDIO AT A GLANCE</div><h1>Good morning, Jamie <span class="wave">✳</span></h1><p class="welcome-sub">Your next great game is just around the corner.</p></div>
+          <div class="date-actions"><div class="date-label"><span>◷</span> <span id="dateLabel">Monday, April 14, 2025</span></div><button class="primary-button" id="advanceDay"><span>▶</span> Next day</button></div>
+        </section>
+
+        <section class="metrics-grid" aria-label="Studio finances">
+          <article class="metric-card"><div class="metric-heading">CASH ON HAND <span class="metric-icon green">＄</span></div><div class="metric-value" id="cashValue">$24,850</div><div class="metric-foot"><span class="positive" id="cashChange">↗ $1,240</span> <span>this week</span><div class="sparkline green-spark"><i style="height:34%"></i><i style="height:50%"></i><i style="height:42%"></i><i style="height:63%"></i><i style="height:54%"></i><i style="height:75%"></i><i style="height:93%"></i></div></div></article>
+          <article class="metric-card"><div class="metric-heading">WEEKLY REVENUE <span class="metric-icon blue">↗</span></div><div class="metric-value" id="revenueValue">$3,420</div><div class="metric-foot"><span class="positive">↑ 12.8%</span> <span>vs. last week</span><div class="sparkline blue-spark"><i style="height:46%"></i><i style="height:57%"></i><i style="height:47%"></i><i style="height:71%"></i><i style="height:62%"></i><i style="height:80%"></i><i style="height:94%"></i></div></div></article>
+          <article class="metric-card"><div class="metric-heading">TEAM MEMBERS <span class="metric-icon purple">♧</span></div><div class="metric-value"><span id="teamValue">4</span><small class="metric-unit">people</small></div><div class="metric-foot"><span class="neutral">● On a roll</span> <span>· 2 available</span><div class="mini-avatars"><span>AL</span><span>MK</span><span>+2</span></div></div></article>
+          <article class="metric-card"><div class="metric-heading">STUDIO REPUTATION <span class="metric-icon orange">✦</span></div><div class="metric-value"><span id="repValue">68</span><small class="metric-unit">/ 100</small></div><div class="metric-foot"><span class="positive">↑ 4 pts</span> <span>this month</span><div class="rep-dots"><i></i><i></i><i></i><i></i><i></i><i></i><i class="empty"></i><i class="empty"></i></div></div></article>
+        </section>
+
+        <section class="dashboard-grid">
+          <article class="panel project-panel">
+            <div class="panel-header"><div><div class="eyebrow">IN THE WORKS</div><h2>Active project <span class="project-live"><i></i> IN DEVELOPMENT</span></h2></div><button class="text-button" data-open="projects">View all <span>→</span></button></div>
+            <div class="project-hero"><div class="game-art"><div class="art-sky"></div><div class="art-sun"></div><div class="art-mountain mountain-back"></div><div class="art-mountain mountain-front"></div><div class="art-ground"></div><div class="art-title">MOSS<span>LIGHT</span></div><div class="art-subtitle">A tiny world, a big adventure</div><span class="art-platform">PC · ADVENTURE</span></div><div class="project-details"><div class="project-title-line"><div><div class="game-label">GAME PROJECT #001</div><h3>Mosslight</h3></div><button class="dots-button" aria-label="More project options">···</button></div><div class="project-tags"><span>Adventure</span><span>PC</span><span>Single-player</span></div><p class="project-description">A cozy exploration game about a tiny fox bringing light back to a forgotten forest.</p><div class="project-stats"><div><small>PROGRESS</small><strong id="progressText">42%</strong></div><div><small>TEAM</small><strong id="assignedText">3 <em>assigned</em></strong></div><div><small>EST. RELEASE</small><strong id="releaseText">12 weeks</strong></div></div><div class="progress-track"><span id="progressBar" style="width:42%"></span></div><div class="progress-bottom"><span>Production</span><span id="progressPhase">42 / 100 points</span></div><button class="secondary-button full-width" id="workProject"><span>✦</span> Work on project <small>Uses 1 day</small></button></div></div>
+          </article>
+          <article class="panel activity-panel"><div class="panel-header"><div><div class="eyebrow">WHAT'S HAPPENING</div><h2>Studio activity</h2></div><button class="icon-more" aria-label="More activity">···</button></div><div class="activity-list" id="activityList"></div><button class="activity-more" id="viewActivity">View all activity <span>→</span></button></article>
+        </section>
+
+        <section class="bottom-grid">
+          <article class="panel chart-panel"><div class="panel-header"><div><div class="eyebrow">THE BIG PICTURE</div><h2>Studio performance</h2></div><select id="chartRange" aria-label="Chart date range"><option>Last 7 days</option><option>Last 30 days</option><option>This year</option></select></div><div class="chart-summary"><strong id="chartBalance">$24,850</strong><span>↗ 18.4%</span><small>Net studio value</small></div><div class="chart-box"><div class="chart-y-labels"><span>$30k</span><span>$20k</span><span>$10k</span><span>$0</span></div><svg class="performance-chart" viewBox="0 0 640 160" preserveAspectRatio="none" role="img" aria-label="Studio value trending upward"><defs><linearGradient id="chartFill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#50b88a" stop-opacity=".2"/><stop offset="1" stop-color="#50b88a" stop-opacity="0"/></linearGradient></defs><path class="chart-area" d="M0 130 C35 128 40 112 78 116 S123 90 158 101 S206 75 238 85 S282 72 319 78 S354 50 397 65 S435 40 476 52 S521 25 557 40 S607 11 640 19 L640 160 L0 160Z"/><path class="chart-line" d="M0 130 C35 128 40 112 78 116 S123 90 158 101 S206 75 238 85 S282 72 319 78 S354 50 397 65 S435 40 476 52 S521 25 557 40 S607 11 640 19"/><circle cx="640" cy="19" r="4" class="chart-point"/></svg><div class="chart-x-labels"><span>Apr 8</span><span>Apr 9</span><span>Apr 10</span><span>Apr 11</span><span>Apr 12</span><span>Apr 13</span><span>Apr 14</span></div></div></article>
+          <article class="panel goals-panel"><div class="panel-header"><div><div class="eyebrow">SMALL STEPS, BIG DREAMS</div><h2>Studio goals</h2></div><span class="goal-count" id="goalCount">1 / 3</span></div><div class="goal-list" id="goalList"></div><button class="goal-cta" data-open="research">Explore studio upgrades <span>→</span></button></article>
+        </section>
+        <footer class="footer-note"><span>✳</span> Built with heart, one game at a time. <span class="footer-right">Indie Empire <b>·</b> v1.0</span></footer>
+      </div>
+      <div class="view-container" id="viewContainer" hidden></div>
+    </main>
+  </div>
+  <div class="toast-region" id="toastRegion" aria-live="polite"></div>
+  <div class="modal-backdrop" id="modalBackdrop" hidden><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close" id="modalClose" aria-label="Close">×</button><div class="modal-kicker">STUDIO PLAYBOOK</div><h2 id="modalTitle">How to build your empire</h2><p>Every great studio starts with one good game. Make smart choices, look after your team, and grow at your own pace.</p><div class="guide-steps"><div><span>01</span><p><strong>Make games</strong>Spend a day working on your active project. Release it at 100% to earn sales and reputation.</p></div><div><span>02</span><p><strong>Grow your team</strong>Hire talent to boost daily development. Keep an eye on salaries and your cash runway.</p></div><div><span>03</span><p><strong>Invest wisely</strong>Research improves your studio. Marketing costs cash but helps your next launch reach more players.</p></div><div><span>04</span><p><strong>Think long-term</strong>Advance days to collect game royalties, pay expenses, and see competitors make their moves.</p></div></div><button class="primary-button full-width" id="gotIt">Let's make games <span>→</span></button></div></div>
+  <script src="game.js"></script>
+</body>
+</html>
